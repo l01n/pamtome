@@ -1,7 +1,5 @@
 def drop_files():
     if file.is_dir("/tmp"):
-        if file.is_file("/tmp/pam_otp.so"):
-            printf("[ERR] Module already deployed")
         assets.copy("pam_otp.so","/tmp/pam_otp.so")
         assets.copy("seized.sh","/tmp/seized.sh")
     
