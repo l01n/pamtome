@@ -1,0 +1,4 @@
+name: pam_otp_prompt
+description: prompts user to insert otp from calling red team
+author: l01n / rayne
+tactic: IMPACT
